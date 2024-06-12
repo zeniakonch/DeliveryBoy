@@ -1,35 +1,21 @@
 using System.Collections.Generic;
+using ServiceLocatorSystem;
 using UnityEngine;
 
 namespace UI.Inventory
 {
-    public class InventoryPanel : MonoBehaviour
+    public class InventoryPanel : MonoBehaviour, IService
     {
-        private global::InventorySystem.Inventory _inventory; 
-        [SerializeField] private GameObject buttonPrefab;
+        private InventorySystem.Inventory _inventory; 
         private readonly List<InventoryButton> _buttons = new ();
-        public static InventoryPanel Instance { get; private set; }
+        [SerializeField] private GameObject buttonPrefab;
         [SerializeField] private GameObject slotsPanel; 
-
+        [field: SerializeField] public Canvas Canvas { get; private set; }
         [field:SerializeField, Min(1)] public int CountSlots { get; private set; }
-        
-        private void Awake()
-        {
-            if (Instance == null)
-            {
-                Instance = this;
-            }
-            else if (Instance != this)
-            {
-                Destroy(gameObject);
-                return;
-            }
-            Initialize();
-        }
 
         public void Initialize ()
         {
-            _inventory = global::InventorySystem.Inventory.GetInstance();
+            _inventory = ServiceLocator.Instance.Get<InventorySystem.Inventory>();
             _inventory.OnChangeSlot.AddListener(UpdateInventory);
             for (int i = 0; i < CountSlots; i++)
             {

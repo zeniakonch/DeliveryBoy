@@ -1,4 +1,5 @@
-﻿using UI.Inventory;
+﻿using ServiceLocatorSystem;
+using UI.Inventory;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -29,9 +30,10 @@ public class SceneLoader : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (InventoryPanel.Instance != null)
+        InventoryPanel inventoryPanel = ServiceLocator.Instance.Get<InventoryPanel>();
+        if (inventoryPanel != null)
         {
-            InventoryPanel.Instance.UpdateInventory(); 
+            inventoryPanel.UpdateInventory(); 
         }
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }

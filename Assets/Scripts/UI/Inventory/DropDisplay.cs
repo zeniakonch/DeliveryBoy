@@ -17,12 +17,14 @@ namespace UI.Inventory
 
         public void OnDrop(PointerEventData eventData)
         {
-            Debug.Log("drop");
             GameObject dropped = eventData.pointerDrag;
             InventoryButton button = dropped.GetComponent<InventoryButton>();
-            Vector2 playerPosition = PlayerScript.Instance.transform.position;
-            ItemSpawnManager.Instance.SpawnItem(new Vector2(playerPosition.x + 5, playerPosition.y), button.Slot.itemData, button.Slot.count);
-            button.Clear();
+            if (button.Slot.itemData != null)
+            {
+                Vector2 playerPosition = PlayerScript.Instance.transform.position;
+                ItemSpawnManager.Instance.SpawnItem(new Vector2(playerPosition.x + 5, playerPosition.y), button.Slot.itemData, button.Slot.count);
+                button.Clear();   
+            }
         }
     }
 }

@@ -1,31 +1,25 @@
 using System;
 using Data;
+using ServiceLocatorSystem;
 using UI.Inventory;
 using UnityEngine.Events;
 
 namespace InventorySystem
 {
-    public class Inventory
+    public class Inventory : IService
     {
-        private static Inventory _instance;
         public readonly UnityEvent OnChangeSlot = new();
         public Slot[] Slots;
+        private InventoryPanel _inventoryPanel;
 
-        public static Inventory GetInstance()
+        public void Initialize()
         {
-            if (_instance == null)
+            _inventoryPanel = ServiceLocator.Instance.Get<InventoryPanel>();
+            Slots = new Slot[_inventoryPanel.CountSlots];
+            for (int i = 0; i < Slots.Length; i++)
             {
-                _instance = new Inventory();
-
-                _instance.Slots = new Slot[InventoryPanel.Instance.CountSlots];
-
-                for (int i = 0; i < _instance.Slots.Length; i++)
-                {
-                    _instance.Slots[i] = new Slot();
-                }
+                Slots[i] = new Slot();
             }
-
-            return _instance;
         }
 
         public void Add(ItemData itemData, int count = 1)

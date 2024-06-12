@@ -9,9 +9,9 @@ namespace Phone.Screens
 {
     public class SearchOrderScreen : ScreenBase
     {
-        [SerializeField] private ChancesConfig chancesConfig;
         [SerializeField] private TMP_Text searchField;
         [SerializeField] private OrderView orderView;
+        [SerializeField] private OrderGeneratorConfig orderGeneratorConfig;
 
         private readonly OrderGenerator _orderGenerator = new();
         private Coroutine _activeOrderGenerating;
@@ -30,7 +30,7 @@ namespace Phone.Screens
                 StopCoroutine(_activeOrderGenerating);
             }
             
-            _activeOrderGenerating = StartCoroutine(_orderGenerator.Generate(chancesConfig.getOrderChance));
+            _activeOrderGenerating = StartCoroutine(_orderGenerator.Generate(orderGeneratorConfig));
         }
 
         public override void Hide()

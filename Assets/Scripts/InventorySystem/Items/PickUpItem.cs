@@ -1,5 +1,7 @@
+using System;
 using Data;
 using Player;
+using ServiceLocatorSystem;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -9,6 +11,12 @@ namespace InventorySystem.Items
     {
         [SerializeField] private float speed = 5f;
         [SerializeField] private float tll = 10f;
+        private Inventory _inventory;
+
+        private void Awake()
+        {
+            _inventory = ServiceLocator.Instance.Get<Inventory>();
+        }
 
         private void Update()
         {
@@ -30,7 +38,7 @@ namespace InventorySystem.Items
                 speed * Time.deltaTime);
             if (distance < 0.1f)
             {
-                Inventory.GetInstance().Add(itemData, count);
+                _inventory.Add(itemData, count);
                 
                 Destroy(gameObject);
             }

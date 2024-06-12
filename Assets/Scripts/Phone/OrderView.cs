@@ -17,6 +17,7 @@ namespace Phone
             gameObject.SetActive(true);
             customerNameField.text = order.CustomerName;
             priceField.text = order.Price.ToString();
+            difficultField.text = order.Difficult.difficultName;
         }
 
         public void OnAcceptButtonClicked()

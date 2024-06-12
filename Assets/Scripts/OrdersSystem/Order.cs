@@ -7,6 +7,6 @@ namespace OrdersSystem
         public Vector2 Point;
         public int Price;
         public string CustomerName;
-        public OrderDifficult Difficult;
+        public OrderDifficultData Difficult;
     }
 }

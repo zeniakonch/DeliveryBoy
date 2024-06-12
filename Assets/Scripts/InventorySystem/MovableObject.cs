@@ -2,17 +2,25 @@ using System;
 using Data;
 using InventorySystem.Items;
 using Player;
+using ServiceLocatorSystem;
 using UnityEngine;
 
 namespace InventorySystem
 {
     public class MovableObject : Item
     {
+        private Inventory _inventory;
+        
+        private void Awake()
+        {
+            _inventory = ServiceLocator.Instance.Get<Inventory>();
+        }
+
         public void PickUp()
         {
             if (Vector2.Distance(PlayerScript.Instance.transform.position, transform.position) <= pickUpDistance)
             {
-                Inventory.GetInstance().Add(itemData);
+                _inventory.Add(itemData);
                 Destroy(gameObject);
             }
         }

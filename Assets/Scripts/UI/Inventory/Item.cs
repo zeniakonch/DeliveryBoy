@@ -12,6 +12,7 @@ namespace UI.Inventory
         public void Clear()
         {
             Image.color = Color.clear;
+            Image.sprite = null;
             count.text = "";
         }
 
