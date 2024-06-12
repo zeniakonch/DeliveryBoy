@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa26736da7f9cc94296fdcc78b40d2c8, type: 3}
-  m_Name: FrenchFries
+  m_Name: Sausage
   m_EditorClassIdentifier: 
-  Name: FrenchFries
-  stackable: 1
-  icon: {fileID: -1524667331, guid: 8f4a50b6d1a334f43ba8ecd11acc6dc0, type: 3}
+  naming: "\u041A\u043E\u043B\u0431\u0430\u0441\u0430"
+  prefab: {fileID: 4089973328611790638, guid: abe78121eb2699e42b08d8a24a1d8496, type: 3}
+  type: 0
+  stackCount: 1
+  price: 1
+  weight: 0.5

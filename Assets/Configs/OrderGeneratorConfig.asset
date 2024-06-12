@@ -18,3 +18,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6393138bf6de0254b92426907d78745d, type: 2}
   generationFrequency: 1
   getOrderChance: 0.2
+  items:
+  - {fileID: 11400000, guid: b3cfb41296e41264fb10febf5456925f, type: 2}
+  - {fileID: 11400000, guid: ac4763ddf831c3f44b6254ff37a30a60, type: 2}
+  - {fileID: 11400000, guid: 45da7beab5b12b340938062df95e2913, type: 2}
+  - {fileID: 11400000, guid: f94743dadf967974280bdfb74e29704c, type: 2}
+  addProductChance: 0.3
+  deltaAddProductChance: 0.1
+  maxAddProductChance: 0.8
+  distanceStep: 1
+  bonusForDistance: 1

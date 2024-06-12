@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6735176186764837040}
   - component: {fileID: -3659456288998567496}
   m_Layer: 0
-  m_Name: Cheese
+  m_Name: Sausage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -725566794, guid: 8f4a50b6d1a334f43ba8ecd11acc6dc0, type: 3}
+  m_Sprite: {fileID: 570798161, guid: 8f4a50b6d1a334f43ba8ecd11acc6dc0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8420212d3cdf4374b8631ab72c564ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: b3cfb41296e41264fb10febf5456925f, type: 2}
+  itemData: {fileID: 11400000, guid: ac4763ddf831c3f44b6254ff37a30a60, type: 2}
   count: 1
   pickUpDistance: 1.5
   speed: 5

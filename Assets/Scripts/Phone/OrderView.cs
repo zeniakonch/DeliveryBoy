@@ -1,5 +1,7 @@
 using System;
 using OrdersSystem;
+using Phone.Screens;
+using ServiceLocatorSystem;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +13,18 @@ namespace Phone
         [SerializeField] private TMP_Text customerNameField;
         [SerializeField] private TMP_Text priceField;
         [SerializeField] private TMP_Text difficultField;
+        private PhoneView _phone;
+        
+        public void Initialize()
+        {
+            _phone = ServiceLocator.Instance.Get<PhoneView>();
+        }
 
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
+        
         public void Show(Order order)
         {
             gameObject.SetActive(true);
@@ -22,7 +35,8 @@ namespace Phone
 
         public void OnAcceptButtonClicked()
         {
-            
+            _phone.ShowScreen<OrderInfoScreen>();
+            _phone.GetScreen<MainScreen>().StartWorkButton.interactable = false;
         }
     }
 }

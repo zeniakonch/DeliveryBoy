@@ -7,11 +7,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa26736da7f9cc94296fdcc78b40d2c8, type: 3}
   m_Name: Cheese
   m_EditorClassIdentifier: 
-  Name: Cheese
-  stackable: 0
+  naming: "\u0421\u044B\u0440"
   prefab: {fileID: 4089973328611790638, guid: 74cd8e301fa22db479f1e711ffbc1550, type: 3}
+  type: 0
+  stackCount: 8
+  price: 100
+  weight: 0.1

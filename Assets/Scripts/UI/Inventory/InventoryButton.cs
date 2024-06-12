@@ -10,20 +10,23 @@ namespace UI.Inventory
         private Item _item;
         public Slot Slot { get; private set; }
         private InventoryPanel _inventoryPanel;
+        private InventorySystem.Inventory _inventory;
+        [SerializeField] private RectTransform rectTransform;
 
         private void Awake()
         {
             _item = GetComponentInChildren<Item>();
             _item.Clear();
             _inventoryPanel = ServiceLocator.Instance.Get<InventoryPanel>();
+            _inventory = ServiceLocator.Instance.Get<InventorySystem.Inventory>();
         }
 
         public void Set(Slot newSlot)
         {
             Slot = newSlot;
-            if (newSlot.itemData != null)
+            if (newSlot.ItemData != null)
             {
-                _item.Fill(newSlot.itemData.prefab.GetComponent<SpriteRenderer>().sprite, newSlot.count);
+                _item.Fill(newSlot.ItemData.prefab.GetComponent<SpriteRenderer>().sprite, newSlot.Count);
             }
             else
             {
@@ -46,7 +49,7 @@ namespace UI.Inventory
         {
             if (_item.Image.sprite != null)
             {
-                DragAndDropSlot.Instance.Show(_item.Image.sprite, transform.localPosition);
+                DragAndDropSlot.Instance.Show(_item.Image.sprite, rectTransform.anchoredPosition);
                 _item.gameObject.SetActive(false);    
             }
         }
@@ -61,9 +64,8 @@ namespace UI.Inventory
         {
             GameObject dropped = eventData.pointerDrag;
             InventoryButton otherButton = dropped.GetComponent<InventoryButton>();
-            Slot cachedSlot = otherButton.Slot;
-            otherButton.Set(Slot);
-            Set(cachedSlot);
+            _inventory.ReplaceSlots(Slot, otherButton.Slot);
+            _inventoryPanel.UpdateInventory();
         }
     }
 }

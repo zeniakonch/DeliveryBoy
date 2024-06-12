@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: Easy
   m_EditorClassIdentifier: 
   difficultName: "\u041B\u0435\u0433\u043A\u043E"
+  minWeight: 5
+  maxWeight: 10
+  multiplier: 0.5

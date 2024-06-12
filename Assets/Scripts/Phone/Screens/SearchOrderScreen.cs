@@ -11,7 +11,7 @@ namespace Phone.Screens
     {
         [SerializeField] private TMP_Text searchField;
         [SerializeField] private OrderView orderView;
-        [SerializeField] private OrderGeneratorConfig orderGeneratorConfig;
+        [field: SerializeField] public OrderGeneratorConfig OrderGeneratorConfig { get; private set; }
 
         private readonly OrderGenerator _orderGenerator = new();
         private Coroutine _activeOrderGenerating;
@@ -20,6 +20,7 @@ namespace Phone.Screens
         {
             base.Initialize();
             _orderGenerator.Initialize();
+            orderView.Initialize();
         }
 
         public override void Show()
@@ -30,7 +31,7 @@ namespace Phone.Screens
                 StopCoroutine(_activeOrderGenerating);
             }
             
-            _activeOrderGenerating = StartCoroutine(_orderGenerator.Generate(orderGeneratorConfig));
+            _activeOrderGenerating = StartCoroutine(_orderGenerator.Generate());
         }
 
         public override void Hide()
@@ -41,7 +42,7 @@ namespace Phone.Screens
             }
             
             searchField.gameObject.SetActive(true);
-            orderView.gameObject.SetActive(false);
+            orderView.Hide();
             base.Hide();
         }
 

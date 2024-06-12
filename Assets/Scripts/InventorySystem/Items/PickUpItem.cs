@@ -1,5 +1,4 @@
 using System;
-using Data;
 using Player;
 using ServiceLocatorSystem;
 using UnityEngine;

@@ -1,5 +1,4 @@
 using System;
-using Data;
 using InventorySystem.Items;
 using Player;
 using ServiceLocatorSystem;
