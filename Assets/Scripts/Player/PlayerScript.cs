@@ -1,3 +1,4 @@
+using ServiceLocatorSystem;
 using TrafficLightScript;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -5,19 +6,16 @@ using UnityEngine.Serialization;
 namespace Player
 {
     
-    public class PlayerScript : MonoBehaviour
+    public class PlayerScript : MonoBehaviour, IService
     {
         
         public Collider2D Collider { get; private set; }
-        
         public SpriteRenderer SpriteRenderer { get; private set; }
-        public static PlayerScript Instance { get; private set; }
 
         private void Awake()
         {
             SpriteRenderer = GetComponent<SpriteRenderer>();
             Collider = GetComponent<Collider2D>();
-            Instance = this;
         }
 
         private void Update()

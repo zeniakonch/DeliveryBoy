@@ -16,6 +16,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b32d87fbbbc1b604eacfd8c5b25b9c9d, type: 2}
   - {fileID: 11400000, guid: 9d5a627977308a64784cb7dfb481bdb0, type: 2}
   - {fileID: 11400000, guid: 6393138bf6de0254b92426907d78745d, type: 2}
+  customerNames:
+  - "\u0421\u044B\u0440\u043E\u0432\u0430\u0440\u0441\u043A\u0438\u0439"
+  - "\u041C\u0438\u043B\u043A\u043E\u0432\u043E\u0434\u0441\u043A\u0438\u0439"
+  - "\u041A\u0430\u0440\u043A\u0443\u043B\u043E\u0432\u0438\u0447"
+  points:
+  - {x: 0, y: 0}
   generationFrequency: 1
   getOrderChance: 0.2
   items:

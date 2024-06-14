@@ -6,7 +6,8 @@ namespace UI.Inventory
 {
     public class InventoryPanel : MonoBehaviour, IService
     {
-        private InventorySystem.Inventory _inventory; 
+        private InventorySystem.Inventory _inventory;
+        private DropDisplay _dropDisplay;
         private readonly List<InventoryButton> _buttons = new ();
         [SerializeField] private GameObject buttonPrefab;
         [SerializeField] private GameObject slotsPanel; 
@@ -16,6 +17,8 @@ namespace UI.Inventory
         public void Initialize ()
         {
             _inventory = ServiceLocator.Instance.Get<InventorySystem.Inventory>();
+            _dropDisplay = ServiceLocator.Instance.Get<DropDisplay>();
+            
             _inventory.OnChangeSlot.AddListener(UpdateInventory);
             for (int i = 0; i < CountSlots; i++)
             {
@@ -29,16 +32,16 @@ namespace UI.Inventory
         {
             if (_inventory != null)
             {
-                DropDisplay.Instance.gameObject.SetActive(true);
+                _dropDisplay.gameObject.SetActive(true);
                 UpdateInventory();
             }
         }
 
         private void OnDisable()
         {
-            if (DropDisplay.Instance != null)
+            if (_dropDisplay != null)
             {
-                DropDisplay.Instance.gameObject.SetActive(false);
+                _dropDisplay.gameObject.SetActive(false);
             }
         }
 

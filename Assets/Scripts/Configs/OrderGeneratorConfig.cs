@@ -9,6 +9,8 @@ namespace Configs
     public class OrderGeneratorConfig : ScriptableObject
     {
         public List<OrderDifficultData> difficulties;
+        public List<string> customerNames;
+        public List<Vector2> points;
         /// <summary>
         /// Частота попыток получения заказа
         /// (раз в какое количество секунд пытаемся сгенерировать заказ)

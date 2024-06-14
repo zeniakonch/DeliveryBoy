@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using Configs;
+using InventorySystem;
 using OrdersSystem;
+using ServiceLocatorSystem;
 using TMPro;
 using UnityEngine;
 
@@ -10,17 +12,21 @@ namespace Phone.Screens
     public class SearchOrderScreen : ScreenBase
     {
         [SerializeField] private TMP_Text searchField;
-        [SerializeField] private OrderView orderView;
+        [SerializeField] public OrderView orderView;
         [field: SerializeField] public OrderGeneratorConfig OrderGeneratorConfig { get; private set; }
-
-        private readonly OrderGenerator _orderGenerator = new();
+        
         private Coroutine _activeOrderGenerating;
+        private OrderGenerator _orderGenerator;
+        private OrderController _orderController;
 
         public override void Initialize()
         {
             base.Initialize();
-            _orderGenerator.Initialize();
             orderView.Initialize();
+            _orderGenerator = ServiceLocator.Instance.Get<OrderGenerator>();
+            _orderController = ServiceLocator.Instance.Get<OrderController>();
+            
+            _orderController.OnOrderChange.AddListener(ShowOrder);
         }
 
         public override void Show()
@@ -46,10 +52,10 @@ namespace Phone.Screens
             base.Hide();
         }
 
-        public void ShowOrder(Order order)
+        private void ShowOrder()
         {
             searchField.gameObject.SetActive(false);
-            orderView.Show(order);
+            orderView.Show();
         }
     }
 }

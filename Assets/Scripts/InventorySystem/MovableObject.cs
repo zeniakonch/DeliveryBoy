@@ -9,15 +9,17 @@ namespace InventorySystem
     public class MovableObject : Item
     {
         private Inventory _inventory;
-        
-        private void Awake()
+        private PlayerScript _player;
+
+        public void Start()
         {
             _inventory = ServiceLocator.Instance.Get<Inventory>();
+            _player = ServiceLocator.Instance.Get<PlayerScript>();
         }
 
         public void PickUp()
         {
-            if (Vector2.Distance(PlayerScript.Instance.transform.position, transform.position) <= pickUpDistance)
+            if (Vector2.Distance(_player.transform.position, transform.position) <= pickUpDistance)
             {
                 _inventory.Add(itemData);
                 Destroy(gameObject);

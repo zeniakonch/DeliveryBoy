@@ -9,8 +9,7 @@ namespace Phone
 {
     public class PhoneView : MonoBehaviour, IService
     {
-        [SerializeField] 
-        private List<ScreenBase> screens;
+        [SerializeField] private List<ScreenBase> screens;
 
         /// <summary>
         /// При изменении списка screens убираем окна одинакового типа

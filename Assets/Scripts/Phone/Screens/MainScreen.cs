@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using OrdersSystem;
 using ServiceLocatorSystem;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +10,17 @@ namespace Phone.Screens
     {
         [field: SerializeField] public Button StartWorkButton { get; private set; }
         [field: SerializeField] public Button ViewOrderInfoButton { get; private set; }
-        
+
+        private OrderController _orderController;
+
+        public override void Initialize()
+        {
+            base.Initialize();
+            _orderController = ServiceLocator.Instance.Get<OrderController>();
+            _orderController.OnOrderChange.AddListener(UpdateButtonsInteractStatus);
+            UpdateButtonsInteractStatus();
+        }
+
         /// <summary>
         /// При нажатии на кнопку начала работы
         /// </summary>
@@ -24,6 +35,20 @@ namespace Phone.Screens
         public void OnViewOrderInfoClicked()
         {
             Phone.ShowScreen<OrderInfoScreen>();
+        }
+
+        private void UpdateButtonsInteractStatus()
+        {
+            if (_orderController.Order is { Status: OrderStatus.Delivery })
+            {
+                StartWorkButton.interactable = false;
+                ViewOrderInfoButton.interactable = true;
+            }
+            else
+            {
+                StartWorkButton.interactable = true;
+                ViewOrderInfoButton.interactable = false;
+            }
         }
     }
 }

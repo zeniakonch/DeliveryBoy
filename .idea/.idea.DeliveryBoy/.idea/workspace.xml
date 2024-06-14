@@ -5,39 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06ca3b61-3a42-4234-9f82-0625ba4fdc75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/Screens/OrderInfoScreen.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/Screens/OrderInfoScreen.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderStatus.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderStatus.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/Arrow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/Arrow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/DistanceView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/DistanceView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeliveryBoy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeliveryBoy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/OrderGeneratorConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/OrderGeneratorConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Foods/Cheese.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Foods/Cheese.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/InventoryButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/InventoryButton.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/FoodsObj/Cheese.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/FoodsObj/Cheese.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/FoodsObj/Cheese.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/FoodsObj/Cheese.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/FoodsObj/FrenchFries.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/FoodsObj/FrenchFries.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/New Item.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/New Item.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/OrderDifficulties/Easy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/OrderDifficulties/Easy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/OrderDifficulties/Hard.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/OrderDifficulties/Hard.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/OrderDifficulties/Medium.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/OrderDifficulties/Medium.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Box.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/FoodsObj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/FoodsObj/Cheese.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/FoodsObj/Cheese.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/FoodsObj/Meat.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/FoodsObj/Meat.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/FoodsObj/Pumpkin.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/FoodsObj/Pumpkin.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/FoodsObj/Sausage.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/FoodsObj/Sausage.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Configs/OrderGeneratorConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Configs/OrderGeneratorConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/ItemData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Items/ItemData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/ItemData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Items/ItemData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/ItemSpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/ItemSpawnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Items/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Items/Item.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Items/PickUpItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Items/PickUpItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/MovableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/MovableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Slot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/Order.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderDifficultData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderDifficultData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/OrderView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/OrderView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/PhoneView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/PhoneView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/Screens/MainScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/Screens/MainScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/Screens/OrderInfoScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/Screens/OrderInfoScreen.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/Screens/SearchOrderScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/Screens/SearchOrderScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ServiceLocatorSystem/ServiceLocatorLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ServiceLocatorSystem/ServiceLocatorLoader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/DropDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/DropDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/InventoryButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/InventoryButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/InventoryPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/InventoryPanel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +127,8 @@
       <option name="presentableId" value="Default" />
       <updated>1718098235551</updated>
       <workItem from="1718098237674" duration="21209000" />
-      <workItem from="1718166495376" duration="20530000" />
+      <workItem from="1718166495376" duration="20679000" />
+      <workItem from="1718338120660" duration="14301000" />
     </task>
     <servers />
   </component>

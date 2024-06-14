@@ -98,8 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c077c5afedb6a440b8b325886144651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: 9d07bb1cf10d7c34099356bd86805f16, type: 2}
+  itemData: {fileID: 11400000, guid: 8ae69ce859613ae40a199f18bfd6074c, type: 2}
   count: 1
+  pickUpDistance: 1.5
 --- !u!61 &6542549937596363987
 BoxCollider2D:
   m_ObjectHideFlags: 0

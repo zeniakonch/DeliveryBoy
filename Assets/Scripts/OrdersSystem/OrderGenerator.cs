@@ -9,23 +9,25 @@ using Phone.Screens;
 using ServiceLocatorSystem;
 using UI.Inventory;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 namespace OrdersSystem
 {
-    public class OrderGenerator
+    public class OrderGenerator : IService
     {
         private bool _isGenerating;
         private SearchOrderScreen _screen;
         private InventoryPanel _inventoryPanel;
         private Inventory _inventory;
         private OrderGeneratorConfig _config;
+        private OrderController _orderController;
 
         public void Initialize()
         {
             _screen = ServiceLocator.Instance.Get<PhoneView>().GetScreen<SearchOrderScreen>();
             _inventoryPanel = ServiceLocator.Instance.Get<InventoryPanel>();
-            _inventory = ServiceLocator.Instance.Get<Inventory>();
+            _orderController = ServiceLocator.Instance.Get<OrderController>();
             _config = _screen.OrderGeneratorConfig;
         }
         
@@ -39,16 +41,19 @@ namespace OrdersSystem
                 if (randomValue <= _config.getOrderChance)
                 {
                     OrderDifficultData difficult = _config.difficulties[Random.Range(0, _config.difficulties.Count)];
-                    _inventory.Initialize(GenerateItems(difficult));
+                    List<Slot> slots = GenerateItems(difficult);
                     
-                    Order order = new()
+                    Order newOrder = new()
                     {
-                        Price = 100,
-                        CustomerName = "Сыроварский",
-                        Point = new Vector2(0, 0),
-                        Difficult = difficult
+                        Status = OrderStatus.InProcessing,
+                        Price = GetPrice(slots),
+                        CustomerName = _config.customerNames[Random.Range(0, _config.customerNames.Count)],
+                        Point = _config.points[Random.Range(0, _config.points.Count)],
+                        Difficult = difficult,
+                        Slots = slots
                     };
-                    _screen.ShowOrder(order);
+
+                    _orderController.Order = newOrder;
                     _isGenerating = false;
                 }
             }
@@ -135,6 +140,21 @@ namespace OrdersSystem
             }
 
             return weight;
+        }
+
+        private int GetPrice(List<Slot> slots)
+        {
+            int price = 0;
+            
+            foreach (var slot in slots)
+            {
+                if (slot.ItemData != null)
+                {
+                    price += slot.ItemData.price * slot.Count;
+                }
+            }
+
+            return price;
         }
     }
 }

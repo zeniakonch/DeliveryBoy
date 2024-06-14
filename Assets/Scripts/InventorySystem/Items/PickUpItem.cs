@@ -11,9 +11,11 @@ namespace InventorySystem.Items
         [SerializeField] private float speed = 5f;
         [SerializeField] private float tll = 10f;
         private Inventory _inventory;
+        private PlayerScript _player;
 
-        private void Awake()
+        private void Start()
         {
+            _player = ServiceLocator.Instance.Get<PlayerScript>();
             _inventory = ServiceLocator.Instance.Get<Inventory>();
         }
 
@@ -25,7 +27,7 @@ namespace InventorySystem.Items
                 Destroy(gameObject);
             }
 
-            float distance = Vector3.Distance(transform.position, PlayerScript.Instance.transform.position);
+            float distance = Vector3.Distance(transform.position, _player.transform.position);
             if (distance > pickUpDistance)
             {
                 return;
@@ -33,7 +35,7 @@ namespace InventorySystem.Items
 
             transform.position = Vector3.MoveTowards(
                 transform.position,
-                PlayerScript.Instance.transform.position,
+                _player.transform.position,
                 speed * Time.deltaTime);
             if (distance < 0.1f)
             {
