@@ -46,6 +46,7 @@ namespace OrdersSystem
                     Order newOrder = new()
                     {
                         Status = OrderStatus.InProcessing,
+                        Number = new OrderNumber(),
                         Price = GetPrice(slots),
                         CustomerName = _config.customerNames[Random.Range(0, _config.customerNames.Count)],
                         Point = _config.points[Random.Range(0, _config.points.Count)],

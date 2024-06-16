@@ -11,6 +11,7 @@ namespace Phone.Screens
     {
         [SerializeField] private TMP_Text customerNameField;
         [SerializeField] private TMP_Text priceField;
+        [SerializeField] private TMP_Text numberField;
         [SerializeField] private Arrow arrow;
         [SerializeField] private DistanceView distanceView;
 
@@ -41,6 +42,7 @@ namespace Phone.Screens
             
             customerNameField.text = order.CustomerName;
             priceField.text = order.Price.ToString();
+            numberField.text = order.Number.ToString();
         }
     }
 }

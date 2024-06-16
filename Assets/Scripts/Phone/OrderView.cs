@@ -47,7 +47,7 @@ namespace Phone
 
         public void OnAcceptButtonClicked()
         {
-            _orderController.ChangeStatus(OrderStatus.Delivery);
+            _orderController.ChangeStatus(OrderStatus.Accepted);
             Order order = _orderController.Order;
             
             if (order != null)

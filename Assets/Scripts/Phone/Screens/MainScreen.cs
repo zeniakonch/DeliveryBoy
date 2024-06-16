@@ -39,7 +39,7 @@ namespace Phone.Screens
 
         private void UpdateButtonsInteractStatus()
         {
-            if (_orderController.Order is { Status: OrderStatus.Delivery })
+            if (_orderController.Order is { Status: OrderStatus.Accepted } or {Status: OrderStatus.Delivery})
             {
                 StartWorkButton.interactable = false;
                 ViewOrderInfoButton.interactable = true;

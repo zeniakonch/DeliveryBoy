@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: InputConfig
   m_EditorClassIdentifier: 
   phoneKey: 116
+  interactKey: 102

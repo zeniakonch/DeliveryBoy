@@ -6,5 +6,6 @@ namespace Configs
     public class InputConfig : ScriptableObject
     {
         public KeyCode phoneKey;
+        public KeyCode interactKey;
     }
 }
