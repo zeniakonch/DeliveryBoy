@@ -54,6 +54,5 @@ namespace UI.Inventory
                 _buttons[i].Set(_inventory.Slots[i]);
             }
         }
-        
     }
 }

@@ -20,7 +20,7 @@ namespace Phone
         public void Initialize()
         {
             _player = ServiceLocator.Instance.Get<PlayerScript>();
-            _orderController = ServiceLocator.Instance.Get<OrderController>();
+            _orderController = ServiceLocator.Instance.Get<OrderGenerator>().OrderController;
             _phone = ServiceLocator.Instance.Get<PhoneView>();
         }
 
@@ -28,12 +28,6 @@ namespace Phone
         {
             int distance = (int)Vector2.Distance(_player.transform.position, target);
             distanceField.text = distance.ToString();
-
-            if (distance <= orderEndDistance)
-            {
-                _orderController.Order = null;
-                _phone.ShowScreen<MainScreen>();
-            }
         }
     }
 }

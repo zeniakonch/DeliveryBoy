@@ -11,7 +11,7 @@ namespace InventorySystem
         {
             if (Input.GetKeyDown(KeyCode.I))
             {
-                panel.SetActive(!panel.activeInHierarchy);
+                panel.SetActive(!panel.activeSelf);
             }
         }
     }

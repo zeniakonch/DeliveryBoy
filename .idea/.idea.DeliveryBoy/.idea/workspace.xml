@@ -5,56 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06ca3b61-3a42-4234-9f82-0625ba4fdc75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/InteractionKey.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/InteractionKey.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MVC.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MVC/ControllerBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MVC/ControllerBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MVC/ViewBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MVC/ViewBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/GetOrderWindow.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/GetOrderWindow/GetOrderWindowController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/GetOrderWindow/GetOrderWindowController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/GetOrderWindow/GetOrderWindowModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/GetOrderWindow/GetOrderWindowModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/GetOrderWindow/GetOrderWindowView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/GetOrderWindow/GetOrderWindowView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/GetOrderWindow/NumberButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/GetOrderWindow/NumberButton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/GetOrderWindow/Output.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/GetOrderWindow/Output.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderGiver.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderGiver/OrderGiverController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderGiver/OrderGiverController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderGiver/OrderGiverModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderGiver/OrderGiverModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderGiver/OrderGiverView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderGiver/OrderGiverView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderNumber.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderNumber.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PathBuildSystem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PathBuildSystem/PathBaker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PathBuildSystem/PathBaker.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PathBuildSystem/PathsSave.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PathBuildSystem/PathsSave.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PathBuildSystem/PathsSaver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PathBuildSystem/PathsSaver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/Customer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/Customer/CustomerBehaviour.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/Customer/CustomerBehaviour.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SaveLoadSystem.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SaveLoadSystem/JsonSaveService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SaveLoadSystem/JsonSaveService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SaveLoadSystem/SaveFilesPathsConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SaveLoadSystem/SaveFilesPathsConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManagement.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManagement/Location.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManagement/Location.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManagement/SceneManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManagement/SceneManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManagement/SceneMover.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DeliveryBoy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeliveryBoy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configs/InputConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/InputConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configs/OrderGeneratorConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configs/OrderGeneratorConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/InventoryPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/InventoryPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Configs/InputConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Configs/InputConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Storage.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Storage.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Configs/OrderGeneratorConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Configs/OrderGeneratorConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/InventoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/InventoryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/GetOrderWindow/GetOrderWindowView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/GetOrderWindow/GetOrderWindowView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderStatus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderGiver/OrderGiverView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OrdersSystem/OrderGiver/OrderGiverView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PathBuildSystem.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PathBuildSystem/PathBaker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PathBuildSystem/PathBaker.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PathBuildSystem/PathsSave.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PathBuildSystem/PathsSave.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PathBuildSystem/PathsSaver.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PathBuildSystem/PathsSaver.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/DistanceView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/DistanceView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/OrderView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/OrderView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/Screens/MainScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/Screens/MainScreen.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/Screens/OrderInfoScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/Screens/OrderInfoScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Phone/Screens/SearchOrderScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Phone/Screens/SearchOrderScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManagement/SceneMover.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ServiceLocatorSystem/ServiceLocatorLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ServiceLocatorSystem/ServiceLocatorLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/InventoryButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/InventoryButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/InventoryPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Inventory/InventoryPanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +69,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OrdersSystem/Order.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PathBuildSystem/PointData.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -97,6 +101,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Documents/DeliveryBoyBuild/Delivery boy.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\kolec\Documents\DeliveryBoyBuild" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.27f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\kolec\unityProjects\DeliveryBoy -debugCodeOptimization" />
@@ -181,7 +193,10 @@
       <workItem from="1718098237674" duration="21209000" />
       <workItem from="1718166495376" duration="20679000" />
       <workItem from="1718338120660" duration="15111000" />
-      <workItem from="1718519612246" duration="15488000" />
+      <workItem from="1718519612246" duration="15536000" />
+      <workItem from="1719029382398" duration="4547000" />
+      <workItem from="1719039265267" duration="903000" />
+      <workItem from="1719040203100" duration="26788000" />
     </task>
     <servers />
   </component>

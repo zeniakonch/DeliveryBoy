@@ -24,13 +24,16 @@ namespace UI.Inventory
         public void Set(Slot newSlot)
         {
             Slot = newSlot;
-            if (newSlot.ItemData != null)
+            if (_item != null)
             {
-                _item.Fill(newSlot.ItemData.prefab.GetComponent<SpriteRenderer>().sprite, newSlot.Count);
-            }
-            else
-            {
-                _item.Clear();
+                if (newSlot.ItemData != null)
+                {
+                    _item.Fill(newSlot.ItemData.prefab.GetComponent<SpriteRenderer>().sprite, newSlot.Count);
+                }
+                else
+                {
+                    _item.Clear();
+                }   
             }
         }
 

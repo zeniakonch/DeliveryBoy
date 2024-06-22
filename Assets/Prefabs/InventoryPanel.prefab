@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6493190220347503443
 RectTransform:
   m_ObjectHideFlags: 0
@@ -92,6 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonPrefab: {fileID: 8790838600906698934, guid: 46f46695e53f5ac44ae5c56d0d8722d0, type: 3}
   slotsPanel: {fileID: 5550872082355296327}
+  <Canvas>k__BackingField: {fileID: 0}
   <CountSlots>k__BackingField: 16
 --- !u!1 &5550872082355296327
 GameObject:

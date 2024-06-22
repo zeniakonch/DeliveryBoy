@@ -1,7 +1,10 @@
 using System;
+using InventorySystem;
 using MVC;
+using OrdersSystem.Customer;
+using Phone;
+using Phone.Screens;
 using ServiceLocatorSystem;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace OrdersSystem.GetOrderWindow
@@ -10,13 +13,17 @@ namespace OrdersSystem.GetOrderWindow
     {
         private OrderController _orderController;
         private bool _isOutput = false;
+        private PhoneView _phone;
+        private Inventory _inventory;
         
         private void Start()
         {
             InitializeController(new GetOrderWindowController(model, this));
             InitializeNumbersButtons();
             model.orderNumberField.text = "";
-            _orderController = ServiceLocator.Instance.Get<OrderController>();
+            _orderController = ServiceLocator.Instance.Get<OrderGenerator>().OrderController;
+            _phone = ServiceLocator.Instance.Get<PhoneView>();
+            _inventory = ServiceLocator.Instance.Get<Inventory>();
             gameObject.SetActive(false);
         }
 
@@ -55,7 +62,7 @@ namespace OrdersSystem.GetOrderWindow
         {
             HideOutput();
             
-            if (_orderController.Order == null)
+            if (_orderController.Order is null or { Status: OrderStatus.InProcessing })
             {
                 ShowOutput(model.noOrderError);
             }
@@ -70,6 +77,11 @@ namespace OrdersSystem.GetOrderWindow
             else
             {
                 ShowOutput(model.acceptSentence);
+                _orderController.ChangeStatus(OrderStatus.Delivery);
+                _phone.ShowScreen<OrderInfoScreen>();
+                
+                _orderController.UpdateArrow();
+                _inventory.Initialize(_orderController.Order.Slots);
             }
         }
 

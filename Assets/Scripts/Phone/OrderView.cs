@@ -17,14 +17,12 @@ namespace Phone
         [SerializeField] private TMP_Text difficultField;
         
         private PhoneView _phone;
-        private Inventory _inventory;
         private OrderController _orderController;
         
         public void Initialize()
         {
-            _orderController = ServiceLocator.Instance.Get<OrderController>();
+            _orderController = ServiceLocator.Instance.Get<OrderGenerator>().OrderController;
             _phone = ServiceLocator.Instance.Get<PhoneView>();
-            _inventory = ServiceLocator.Instance.Get<Inventory>();
         }
 
         public void Hide()
@@ -39,7 +37,7 @@ namespace Phone
             gameObject.SetActive(true);
             if (order != null)
             {
-                customerNameField.text = order.CustomerName;
+                customerNameField.text = order.Customer.CustomerName;
                 priceField.text = order.Price.ToString();
                 difficultField.text = order.Difficult.difficultName;
             }
@@ -54,7 +52,7 @@ namespace Phone
             {
                 _phone.ShowScreen<OrderInfoScreen>();
                 _phone.GetScreen<OrderInfoScreen>().ShowOrderInfo();
-                _inventory.Initialize(order.Slots);
+                _orderController.UpdateArrow();
             }
         }
     }

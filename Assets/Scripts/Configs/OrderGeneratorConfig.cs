@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using InventorySystem.Items;
 using OrdersSystem;
+using OrdersSystem.Customer;
 using UnityEngine;
 
 namespace Configs
@@ -9,7 +10,6 @@ namespace Configs
     public class OrderGeneratorConfig : ScriptableObject
     {
         public List<OrderDifficultData> difficulties;
-        public List<string> customerNames;
         public List<Vector2> points;
         /// <summary>
         /// Частота попыток получения заказа

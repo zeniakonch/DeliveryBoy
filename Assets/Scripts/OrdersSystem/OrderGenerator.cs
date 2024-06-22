@@ -4,31 +4,36 @@ using System.Collections.Generic;
 using Configs;
 using InventorySystem;
 using InventorySystem.Items;
+using OrdersSystem.Customer;
+using OrdersSystem.OrderGiver;
 using Phone;
 using Phone.Screens;
 using ServiceLocatorSystem;
 using UI.Inventory;
 using UnityEngine;
-using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 namespace OrdersSystem
 {
-    public class OrderGenerator : IService
+    public class OrderGenerator : MonoBehaviour, IService
     {
+        [SerializeField] private List<CustomerBehaviour> customers;
+        [SerializeField] private List<OrderGiverView> givers;
+        
+        public OrderController OrderController { get; private set; }
+        
         private bool _isGenerating;
         private SearchOrderScreen _screen;
         private InventoryPanel _inventoryPanel;
         private Inventory _inventory;
         private OrderGeneratorConfig _config;
-        private OrderController _orderController;
 
         public void Initialize()
         {
             _screen = ServiceLocator.Instance.Get<PhoneView>().GetScreen<SearchOrderScreen>();
             _inventoryPanel = ServiceLocator.Instance.Get<InventoryPanel>();
-            _orderController = ServiceLocator.Instance.Get<OrderController>();
             _config = _screen.OrderGeneratorConfig;
+            OrderController = new OrderController();
         }
         
         public IEnumerator Generate()
@@ -47,14 +52,15 @@ namespace OrdersSystem
                     {
                         Status = OrderStatus.InProcessing,
                         Number = new OrderNumber(),
+                        OrderGiver = givers[Random.Range(0, givers.Count)],
                         Price = GetPrice(slots),
-                        CustomerName = _config.customerNames[Random.Range(0, _config.customerNames.Count)],
+                        Customer = customers[Random.Range(0, customers.Count)],
                         Point = _config.points[Random.Range(0, _config.points.Count)],
                         Difficult = difficult,
                         Slots = slots
                     };
 
-                    _orderController.Order = newOrder;
+                    OrderController.Order = newOrder;
                     _isGenerating = false;
                 }
             }

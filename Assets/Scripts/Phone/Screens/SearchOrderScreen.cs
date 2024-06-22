@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Configs;
 using InventorySystem;
 using OrdersSystem;
+using OrdersSystem.OrderGiver;
+using SceneManagement;
 using ServiceLocatorSystem;
 using TMPro;
 using UnityEngine;
@@ -12,7 +14,9 @@ namespace Phone.Screens
     public class SearchOrderScreen : ScreenBase
     {
         [SerializeField] private TMP_Text searchField;
-        [SerializeField] public OrderView orderView;
+        [SerializeField] private OrderView orderView;
+        [SerializeField] private OrderGiverView giver;
+        
         [field: SerializeField] public OrderGeneratorConfig OrderGeneratorConfig { get; private set; }
         
         private Coroutine _activeOrderGenerating;
@@ -24,9 +28,9 @@ namespace Phone.Screens
             base.Initialize();
             orderView.Initialize();
             _orderGenerator = ServiceLocator.Instance.Get<OrderGenerator>();
-            _orderController = ServiceLocator.Instance.Get<OrderController>();
-            
+            _orderController = _orderGenerator.OrderController;
             _orderController.OnOrderChange.AddListener(ShowOrder);
+            Debug.Log(_orderGenerator);
         }
 
         public override void Show()
@@ -36,6 +40,9 @@ namespace Phone.Screens
             {
                 StopCoroutine(_activeOrderGenerating);
             }
+            
+            searchField.gameObject.SetActive(true);
+            orderView.Hide();
             
             _activeOrderGenerating = StartCoroutine(_orderGenerator.Generate());
         }
@@ -47,13 +54,20 @@ namespace Phone.Screens
                 StopCoroutine(_activeOrderGenerating);
             }
             
-            searchField.gameObject.SetActive(true);
-            orderView.Hide();
             base.Hide();
         }
 
         private void ShowOrder()
         {
+            if (giver != null)
+            {
+                Phone.GetScreen<OrderInfoScreen>().point = giver.transform.position;
+            }
+            else
+            {
+                Phone.GetScreen<OrderInfoScreen>().point = _orderController.Order.Point;
+            }
+            
             searchField.gameObject.SetActive(false);
             orderView.Show();
         }

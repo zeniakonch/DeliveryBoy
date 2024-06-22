@@ -1,11 +1,9 @@
 using ServiceLocatorSystem;
 using TrafficLightScript;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Player
 {
-    
     public class PlayerScript : MonoBehaviour, IService
     {
         

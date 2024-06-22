@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using OrdersSystem;
 using ServiceLocatorSystem;
@@ -16,7 +17,7 @@ namespace Phone.Screens
         public override void Initialize()
         {
             base.Initialize();
-            _orderController = ServiceLocator.Instance.Get<OrderController>();
+            _orderController = ServiceLocator.Instance.Get<OrderGenerator>().OrderController;
             _orderController.OnOrderChange.AddListener(UpdateButtonsInteractStatus);
             UpdateButtonsInteractStatus();
         }
@@ -37,7 +38,7 @@ namespace Phone.Screens
             Phone.ShowScreen<OrderInfoScreen>();
         }
 
-        private void UpdateButtonsInteractStatus()
+        public void UpdateButtonsInteractStatus()
         {
             if (_orderController.Order is { Status: OrderStatus.Accepted } or {Status: OrderStatus.Delivery})
             {

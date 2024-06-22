@@ -15,6 +15,8 @@ namespace Phone.Screens
         [SerializeField] private Arrow arrow;
         [SerializeField] private DistanceView distanceView;
 
+        public Vector2 point;
+        
         private OrderController _orderController;
 
         public override void Initialize()
@@ -22,8 +24,7 @@ namespace Phone.Screens
             base.Initialize();
             arrow.Initialize();
             distanceView.Initialize();
-            
-            _orderController = ServiceLocator.Instance.Get<OrderController>();
+            _orderController = ServiceLocator.Instance.Get<OrderGenerator>().OrderController;
         }
 
         private void Update()
@@ -32,17 +33,22 @@ namespace Phone.Screens
 
             if (order == null) return;
             
-            arrow.UpdateDirection(order.Point);
-            distanceView.UpdateDistance(order.Point);
+            UpdatePoint(point);
         }
 
         public void ShowOrderInfo()
         {
             Order order = _orderController.Order;
             
-            customerNameField.text = order.CustomerName;
+            customerNameField.text = order.Customer.CustomerName;
             priceField.text = order.Price.ToString();
             numberField.text = order.Number.ToString();
+        }
+
+        private void UpdatePoint(Vector2 position)
+        {
+            arrow.UpdateDirection(position);
+            distanceView.UpdateDistance(position);
         }
     }
 }

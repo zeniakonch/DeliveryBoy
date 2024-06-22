@@ -1,11 +1,18 @@
 using System;
 using MVC;
+using SceneManagement;
+using ServiceLocatorSystem;
 using UnityEngine;
 
 namespace OrdersSystem.OrderGiver
 {
     public class OrderGiverView : ViewBase<OrderGiverModel, OrderGiverController>
     {
+        [field: SerializeField] public string GiverName { get; private set; }
+        [field: SerializeField] public Location Location { get; private set; }
+
+        private SceneManager _sceneManager;
+        
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.green;
@@ -16,6 +23,7 @@ namespace OrdersSystem.OrderGiver
         {
             InitializeController(new OrderGiverController(model, this));
             model.interactionKey.SetKey(model.inputConfig.interactKey);
+            _sceneManager = ServiceLocator.Instance.Get<SceneManager>();
         }
 
         private void Update()
@@ -26,6 +34,16 @@ namespace OrdersSystem.OrderGiver
             {
                 model.getOrderWindow.gameObject.SetActive(true);
             }
+        }
+
+        public bool IsAtCurrentLocation()
+        {
+            if (_sceneManager.currentLocation == Location)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

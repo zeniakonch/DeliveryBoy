@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using InventorySystem;
+using OrdersSystem.Customer;
+using OrdersSystem.OrderGiver;
 using UnityEngine;
 
 namespace OrdersSystem
@@ -10,7 +12,8 @@ namespace OrdersSystem
         public OrderNumber Number;
         public Vector2 Point;
         public int Price;
-        public string CustomerName;
+        public CustomerBehaviour Customer;
+        public OrderGiverView OrderGiver;
         public OrderDifficultData Difficult;
         public List<Slot> Slots;
     }
